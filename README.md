@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Trivia Flashcards
+
+JS | REACT
+
+<img src="public/screenshot.png">
+
+This project was made using the [Open Trivia Database](https://opentdb.com/api_config.php). Choose a category and test your trivia knowledge!
+
 
 ## Available Scripts
 

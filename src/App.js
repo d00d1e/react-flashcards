@@ -38,7 +38,7 @@ function App() {
       })
       .then(res => {
         setFlashCards(res.data.results.map((questionItem, index) => {
-          const answer = decodeString(questionItem.correct_answer);
+          const answer = questionItem.correct_answer;
           const options = [
             ...questionItem.incorrect_answers.map(a => decodeString(a)), 
             answer
@@ -47,7 +47,7 @@ function App() {
           return {
             id: `${index}-${Date.now()}`,
             question: decodeString(questionItem.question),
-            answer: questionItem.correct_answer,
+            answer: decodeString(questionItem.correct_answer),
             options: options.sort(() => Math.random() - 0.5) 
           }
         }))
